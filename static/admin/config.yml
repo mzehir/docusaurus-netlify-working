@@ -20,6 +20,36 @@ collections:
       - { name: "body", label: "fffff", widget: "markdown", required: false }
     meta: { path: { widget: string, label: "zzzzz", index_file: "index" } }
 
+  - name: examples
+    label: Örnekler
+    label_singular: "Example"
+    folder: _examples
+    create: true
+    nested: { depth: 100, subfolders: false }
+    fields:
+      - { name: "active", label: "Aktif mi?", widget: "boolean", default: true }
+      - { name: "code", label: "Kod", widget: "code", default_language: "javascript" }
+      - { name: "color", label: "Renk", widget: "color" }
+      - { name: "publish_date", label: "Yayın Tarihi", widget: "datetime" }
+      - { name: "document", label: "Belge", widget: "file" }
+      - { name: "layout", label: "Layout", widget: "hidden", default: "blog" }
+      - { name: "thumbnail", label: "Kapak Görseli", widget: "image" }
+      - { name: "tags", label: "Etiketler", widget: "list" }
+      - { name: "location", label: "Konum", widget: "map" }
+      - { name: "body", label: "İçerik", widget: "markdown" }
+      - { name: "rating", label: "Puan", widget: "number" }
+      - label: "Adres"
+        name: "address"
+        widget: "object"
+        fields:
+          - { label: "Şehir", name: "city", widget: "string" }
+          - { label: "Posta Kodu", name: "zip", widget: "string" }
+      - { name: "author", label: "Yazar", widget: "relation", collection: "authors", search_fields: ["name"], value_field: "name", display_fields: ["name"] }
+      - { name: "category", label: "Kategori", widget: "select", options: ["Duyuru", "Blog", "Etkinlik"] }
+      - { name: "title", label: "Başlık", widget: "string" }
+      - { name: "summary", label: "Özet", widget: "text" }
+    meta: { path: { widget: string, label: "zzzzz", index_file: "index" } }
+
   # - name: docs
   #   label: Dokümanlar 1
   #   label_singular: "Doc"
