@@ -6,10 +6,10 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "docs"
-    label: "Dokümanlar 1"
+  - name: docs
+    label: Dokümanlar 1
     label_singular: "Doc"
-    folder: "docs"
+    folder: docs
     create: true
     nested:
       depth: 5
