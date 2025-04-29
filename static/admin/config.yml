@@ -33,6 +33,7 @@ collections:
           label: "Aktif mi?",
           widget: "boolean",
           default: true,
+          required: false,
         }
 
       - {
@@ -41,6 +42,7 @@ collections:
           label: "Kod",
           widget: "code",
           default_language: "javascript",
+          required: false,
         }
 
       - {
@@ -48,6 +50,7 @@ collections:
           name: "color",
           label: "Renk",
           widget: "color",
+          required: false,
         }
 
       - {
@@ -55,6 +58,7 @@ collections:
           name: "publish_date",
           label: "Yayın Tarihi",
           widget: "datetime",
+          required: false,
         }
 
       - {
@@ -62,25 +66,35 @@ collections:
           name: "document",
           label: "Belge",
           widget: "file",
+          required: false,
         }
 
-      - { name: "layout", label: "Layout", widget: "hidden", default: "blog" }
+      - {
+          # asd
+          name: "layout",
+          label: "Layout",
+          widget: "hidden",
+          default: "blog",
+          required: false,
+        }
 
       - {
           # Görsel yüklemek için kullanılır. => Mesela kapak görseli, profil fotoğrafı gibi görsel eklenmesi gereken durumlarda kullanılabilir.
           name: "thumbnail",
           label: "Kapak Görseli",
           widget: "image",
+          required: false,
         }
 
       - {
           # Mesela etiketler, anahtar kelimeler, maddeler gibi birden fazla veri girilecekse kullanılabilir.
           name: "tags",
-          label: "Etiketler AA",
+          label: "Etiketler",
           widget: "list",
           max: 3,
-          min: 1,
+          min: 0,
           allow_add: true,
+          required: false,
         }
 
       - {
@@ -88,6 +102,7 @@ collections:
           name: "location",
           label: "Konum",
           widget: "map",
+          required: false,
         }
 
       - {
@@ -95,6 +110,7 @@ collections:
           name: "body",
           label: "İçerik",
           widget: "markdown",
+          required: false,
         }
 
       - {
@@ -102,17 +118,21 @@ collections:
           name: "rating",
           label: "Puan",
           widget: "number",
+          required: false,
         }
 
         # Birden fazla alanı bir arada gruplamak için kullanılır. => Mesela adres, sosyal medya linkleri gibi birden fazla alt alanı olan veri gruplarında kullanılabilir.
       - label: "Adres"
         name: "address"
         widget: "object"
+        required: false
         fields:
           - { label: "Şehir", name: "city", widget: "string" }
           - { label: "Posta Kodu", name: "zip", widget: "string" }
 
       - {
+          # Bir içeriği başka bir koleksiyondaki bir veya birden fazla öğeyle ilişkilendirmek için kullanılır. => Bir blog yazısının yazarını seçmek, bir ürünün kategorisini belirlemek için kullanılabilir.
+          # Blog yazısına yazar atamak, ürüne kategori atamak, etkinliğe konuşmacı eklemek, referans, kaynak, bağlantı gibi ilişkili veri göstermek
           name: "author",
           label: "Yazar",
           widget: "relation",
@@ -120,6 +140,7 @@ collections:
           search_fields: ["name"],
           value_field: "name",
           display_fields: ["name"],
+          required: false,
         }
 
       - {
@@ -128,6 +149,7 @@ collections:
           label: "Kategori",
           widget: "select",
           options: ["Duyuru", "Blog", "Etkinlik"],
+          required: false,
         }
 
       - {
@@ -135,6 +157,7 @@ collections:
           name: "title",
           label: "Başlık",
           widget: "string",
+          required: false,
         }
 
       - {
@@ -142,6 +165,7 @@ collections:
           name: "summary",
           label: "Özet",
           widget: "text",
+          required: false,
         }
 
     meta: { path: { widget: string, label: "Yol", index_file: "index" } }
