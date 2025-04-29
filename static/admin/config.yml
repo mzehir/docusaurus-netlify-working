@@ -6,8 +6,8 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: pages # a nested collection
-    label: Pages
+  - name: pages
+    label: aaaaa
     label_singular: 'Page'
     folder: _pages
     create: true
