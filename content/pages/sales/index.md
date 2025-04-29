@@ -1,0 +1,4 @@
+---
+title: Satış
+---
+Sales Folder
