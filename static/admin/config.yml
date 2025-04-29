@@ -70,7 +70,7 @@ collections:
         }
 
       - {
-          # asd
+          # Her oluşturulan içerikte, belirttiğin sabit bir değeri otomatik olarak dosyanın başına (front matter) ekler. Kullanıcıya admin panelinde hiç gösterilmez.
           name: "layout",
           label: "Layout",
           widget: "hidden",
