@@ -17,20 +17,13 @@ collections:
     nested:
       depth: 5
       summary: "{{title}}"
-    # fields:
-    #   - label: Title
-    #     name: title
-    #     widget: string
-    #   - label: Body
-    #     name: body
-    #     widget: markdown
-    fields: # Burada listelenen alanlar içerik düzenleyicide alanlar olarak gösterilir, ardından belgenin başında ön madde olarak kaydedilir ( Body hariç ).
-      - { label: "Layout", name: "layout", widget: "string", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" } # Düzenleme alanındaki başlık girilen kısmı
-      - { label: "Publish Date", name: "date", widget: "datetime" } # Düzenleme alanındaki tarih seçimi kısmı
-      - { label: "Featured Image", name: "thumbnail", widget: "image" } # Düzenleme alanındaki fotoğraf yükleme kısmı
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" } # Düzenleme alanındaki puanlama kısmı
-      - { label: "Body", name: "body", widget: "markdown" } # Düzenleme alanındaki body kısmı burada markdown yerleştirilmiş
+    fields:
+      - label: Başlık
+        name: title
+        widget: string
+      - label: İçerik
+        name: body
+        widget: markdown
     meta: { path: { widget: string, label: "Path", index_file: "index" } }
 
   # - name: "blog" # Rotalarda kullanılan gönderi türü tanımlayıcısı. Benzersiz olmalıdır. ==> /admin/collections/blog
@@ -39,22 +32,10 @@ collections:
   #   create: true # Kullanıcıların bu koleksiyonda yeni dosyalar oluşturmasına izin vermek için ayarlanır.
   #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Dosya adı şablonu. Örnek: 2024-06-07-baslik.md şeklinde oluşturur.
 
-  # - name: pages
-  #   label: Pages
-  #   label_singular: "Page"
-  #   folder: content/pages
-  #   create: true
-  #   # adding a nested object will show the collection folder structure
-  #   nested:
-  #     depth: 100 # max depth to show in the collection tree
-  #     summary: "{{title}}" # optional summary for a tree node, defaults to the inferred title field
-  #   fields:
-  #     - label: Title
-  #       name: title
-  #       widget: string
-  #     - label: Body
-  #       name: body
-  #       widget: markdown
-  #   # adding a meta object with a path property allows editing the path of entries
-  #   # moving an existing entry will move the entire sub tree of the entry to the new location
-  #   meta: { path: { widget: string, label: "Path", index_file: "index" } }
+  # fields: # Burada listelenen alanlar içerik düzenleyicide alanlar olarak gösterilir, ardından belgenin başında ön madde olarak kaydedilir ( Body hariç ).
+  # - { label: "Layout", name: "layout", widget: "string", default: "blog" }
+  # - { label: "Title", name: "title", widget: "string" } # Düzenleme alanındaki başlık girilen kısmı
+  # - { label: "Publish Date", name: "date", widget: "datetime" } # Düzenleme alanındaki tarih seçimi kısmı
+  # - { label: "Featured Image", name: "thumbnail", widget: "image" } # Düzenleme alanındaki fotoğraf yükleme kısmı
+  # - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" } # Düzenleme alanındaki puanlama kısmı
+  # - { label: "Body", name: "body", widget: "markdown" } # Düzenleme alanındaki body kısmı burada markdown yerleştirilmiş
