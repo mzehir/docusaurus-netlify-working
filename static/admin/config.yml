@@ -28,3 +28,15 @@ collections:
         name: title
         widget: string
     meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+
+  - name: pages2 # a nested collection
+    label: Pages2
+    label_singular: 'Page2'
+    folder: _pages2
+    create: true
+    nested: { depth: 100, subfolders: true }
+    fields:
+      - label: Title
+        name: title
+        widget: string
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
