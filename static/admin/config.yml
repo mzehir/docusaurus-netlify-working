@@ -28,13 +28,13 @@ collections:
     nested: { depth: 100, subfolders: false }
     fields:
       - { name: "active", label: "Aktif mi?", widget: "boolean", default: true } # Evet/Hayır, Açık/Kapalı gibi iki durumlu seçimler için kullanılır. => Mesela bir içeriğin aktif/pasif, öne çıkarılmış/çıkarılmamış gibi durumlarını yönetebilmek için kullanılabilir.
-      - { name: "code", label: "Kod", widget: "code", default_language: "javascript" }
-      - { name: "color", label: "Renk", widget: "color" }
-      - { name: "publish_date", label: "Yayın Tarihi", widget: "datetime" }
-      - { name: "document", label: "Belge", widget: "file" }
+      - { name: "code", label: "Kod", widget: "code", default_language: "javascript" } # Kod blokları eklemek için kullanılır. => Mesela kullanıcıdan bir kod parçası (ör. HTML, CSS, JS) alınacaksa kullanılabilir.
+      - { name: "color", label: "Renk", widget: "color" } # Kullanıcıya renk seçici sunar. Kullanıcının seçtiği renk md dosyasına yazlır. İstersek bu rengi herhangi bir md elementine işleyebiliriz. => Mesela kullanıcıdan h1, h2, h3... her biri için ayrı ayrı renk istenebilir.
+      - { name: "publish_date", label: "Yayın Tarihi", widget: "datetime" } # Tarih ve saat seçici sunar. => Mesela yayın tarihi, etkinlik zamanı gibi zaman bilgisinin gerektiği durumlarda kullanılabilir.
+      - { name: "document", label: "Belge", widget: "file" } # Herhangi bir dosya yüklemek için kullanılır. => PDF, doküman, sunum gibi dosyalar eklenmek istendiğinde kullanılabilir.
       - { name: "layout", label: "Layout", widget: "hidden", default: "blog" }
-      - { name: "thumbnail", label: "Kapak Görseli", widget: "image" }
-      - { name: "tags", label: "Etiketler", widget: "list" }
+      - { name: "thumbnail", label: "Kapak Görseli", widget: "image" } # Görsel yüklemek için kullanılır. => Mesela kapak görseli, profil fotoğrafı gibi görsel eklenmesi gereken durumlarda kullanılabilir.
+      - { name: "tags", label: "Etiketler", widget: "list", allow_add: true } # Etiketler, anahtar kelimeler, maddeler gibi birden fazla veri girilecekse kullanılabilir.
       - { name: "location", label: "Konum", widget: "map" }
       - { name: "body", label: "İçerik", widget: "markdown" }
       - { name: "rating", label: "Puan", widget: "number" }
