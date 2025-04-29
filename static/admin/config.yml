@@ -27,27 +27,123 @@ collections:
     create: true
     nested: { depth: 100, subfolders: false }
     fields:
-      - { name: "active", label: "Aktif mi?", widget: "boolean", default: true } # Evet/Hayır, Açık/Kapalı gibi iki durumlu seçimler için kullanılır. => Mesela bir içeriğin aktif/pasif, öne çıkarılmış/çıkarılmamış gibi durumlarını yönetebilmek için kullanılabilir.
-      - { name: "code", label: "Kod", widget: "code", default_language: "javascript" } # Kod blokları eklemek için kullanılır. => Mesela kullanıcıdan bir kod parçası (ör. HTML, CSS, JS) alınacaksa kullanılabilir.
-      - { name: "color", label: "Renk", widget: "color" } # Kullanıcıya renk seçici sunar. Kullanıcının seçtiği renk md dosyasına yazlır. İstersek bu rengi herhangi bir md elementine işleyebiliriz. => Mesela kullanıcıdan h1, h2, h3... her biri için ayrı ayrı renk istenebilir.
-      - { name: "publish_date", label: "Yayın Tarihi", widget: "datetime" } # Tarih ve saat seçici sunar. => Mesela yayın tarihi, etkinlik zamanı gibi zaman bilgisinin gerektiği durumlarda kullanılabilir.
-      - { name: "document", label: "Belge", widget: "file" } # Herhangi bir dosya yüklemek için kullanılır. => PDF, doküman, sunum gibi dosyalar eklenmek istendiğinde kullanılabilir.
+      - {
+          # Evet/Hayır, Açık/Kapalı gibi iki durumlu seçimler için kullanılır. => Mesela bir içeriğin aktif/pasif, öne çıkarılmış/çıkarılmamış gibi durumlarını yönetebilmek için kullanılabilir.
+          name: "active",
+          label: "Aktif mi?",
+          widget: "boolean",
+          default: true,
+        }
+
+      - {
+          # Kod blokları eklemek için kullanılır. => Mesela kullanıcıdan bir kod parçası (ör. HTML, CSS, JS) alınacaksa kullanılabilir.
+          name: "code",
+          label: "Kod",
+          widget: "code",
+          default_language: "javascript",
+        }
+
+      - {
+          # Kullanıcıya renk seçici sunar. Kullanıcının seçtiği renk md dosyasına yazlır. İstersek bu rengi herhangi bir md elementine işleyebiliriz. => Mesela kullanıcıdan h1, h2, h3... her biri için ayrı ayrı renk istenebilir.
+          name: "color",
+          label: "Renk",
+          widget: "color",
+        }
+
+      - {
+          # Tarih ve saat seçici sunar. => Mesela yayın tarihi, etkinlik zamanı gibi zaman bilgisinin gerektiği durumlarda kullanılabilir.
+          name: "publish_date",
+          label: "Yayın Tarihi",
+          widget: "datetime",
+        }
+
+      - {
+          # Herhangi bir dosya yüklemek için kullanılır. => PDF, doküman, sunum gibi dosyalar eklenmek istendiğinde kullanılabilir.
+          name: "document",
+          label: "Belge",
+          widget: "file",
+        }
+
       - { name: "layout", label: "Layout", widget: "hidden", default: "blog" }
-      - { name: "thumbnail", label: "Kapak Görseli", widget: "image" } # Görsel yüklemek için kullanılır. => Mesela kapak görseli, profil fotoğrafı gibi görsel eklenmesi gereken durumlarda kullanılabilir.
-      - { name: "tags", label: "Etiketler AA", widget: "list", max: 3, min: 1, allow_add: true } # Mesela etiketler, anahtar kelimeler, maddeler gibi birden fazla veri girilecekse kullanılabilir.
-      - { name: "location", label: "Konum", widget: "map" } # Harita üzerinden konum seçmek için kullanılır. => Mesela adres, etkinlik yeri, mağaza konumu gibi coğrafi bilgi gerektiğinde kullanılabilir.
-      - { name: "body", label: "İçerik", widget: "markdown" } # Zengin metin (başlık, liste, link, görsel vb.) girişi için kullanılır.s
-      - { name: "rating", label: "Puan", widget: "number" } # Sayı girişi için kullanılır. => Sıralama, puan, fiyat gibi sayısal veri gerektiğinde kullanılabilir.
-      - label: "Adres" # Birden fazla alanı bir arada gruplamak için kullanılır. => Mesela adres, sosyal medya linkleri gibi birden fazla alt alanı olan veri gruplarında kullanılabilir.
+
+      - {
+          # Görsel yüklemek için kullanılır. => Mesela kapak görseli, profil fotoğrafı gibi görsel eklenmesi gereken durumlarda kullanılabilir.
+          name: "thumbnail",
+          label: "Kapak Görseli",
+          widget: "image",
+        }
+
+      - {
+          # Mesela etiketler, anahtar kelimeler, maddeler gibi birden fazla veri girilecekse kullanılabilir.
+          name: "tags",
+          label: "Etiketler AA",
+          widget: "list",
+          max: 3,
+          min: 1,
+          allow_add: true,
+        }
+
+      - {
+          # Harita üzerinden konum seçmek için kullanılır. => Mesela adres, etkinlik yeri, mağaza konumu gibi coğrafi bilgi gerektiğinde kullanılabilir.
+          name: "location",
+          label: "Konum",
+          widget: "map",
+        }
+
+      - {
+          # Zengin metin (başlık, liste, link, görsel vb.) girişi için kullanılır.
+          name: "body",
+          label: "İçerik",
+          widget: "markdown",
+        }
+
+      - {
+          # Sayı girişi için kullanılır. => Sıralama, puan, fiyat gibi sayısal veri gerektiğinde kullanılabilir.
+          name: "rating",
+          label: "Puan",
+          widget: "number",
+        }
+
+        # Birden fazla alanı bir arada gruplamak için kullanılır. => Mesela adres, sosyal medya linkleri gibi birden fazla alt alanı olan veri gruplarında kullanılabilir.
+      - label: "Adres"
         name: "address"
         widget: "object"
         fields:
           - { label: "Şehir", name: "city", widget: "string" }
           - { label: "Posta Kodu", name: "zip", widget: "string" }
-      - { name: "author", label: "Yazar", widget: "relation", collection: "authors", search_fields: ["name"], value_field: "name", display_fields: ["name"] }
-      - { name: "category", label: "Kategori", widget: "select", options: ["Duyuru", "Blog", "Etkinlik"] } # Açılır menüden tek veya çoklu seçim için kullanılır. => Mesela kategori, durum, tür gibi önceden tanımlı seçenekler arasından seçim yapılacaksa kullanılabilir.
-      - { name: "title", label: "Başlık", widget: "string" } # Tek satırlık metin girişi için kullanılır. => Mesela başlık, isim, kısa açıklama gibi kısa metinler için kullanılabilir.
-      - { name: "summary", label: "Özet", widget: "text" } # Çok satırlı metin girişi için kullanılır. Mesela uzun açıklama, özet, biyografi gibi alanlarda kullanılabilir.
+
+      - {
+          name: "author",
+          label: "Yazar",
+          widget: "relation",
+          collection: "authors",
+          search_fields: ["name"],
+          value_field: "name",
+          display_fields: ["name"],
+        }
+
+      - {
+          # Açılır menüden tek veya çoklu seçim için kullanılır. => Mesela kategori, durum, tür gibi önceden tanımlı seçenekler arasından seçim yapılacaksa kullanılabilir.
+          name: "category",
+          label: "Kategori",
+          widget: "select",
+          options: ["Duyuru", "Blog", "Etkinlik"],
+        }
+
+      - {
+          # Tek satırlık metin girişi için kullanılır. => Mesela başlık, isim, kısa açıklama gibi kısa metinler için kullanılabilir.
+          name: "title",
+          label: "Başlık",
+          widget: "string",
+        }
+
+      - {
+          # Çok satırlı metin girişi için kullanılır. Mesela uzun açıklama, özet, biyografi gibi alanlarda kullanılabilir.
+          name: "summary",
+          label: "Özet",
+          widget: "text",
+        }
+
     meta: { path: { widget: string, label: "Yol", index_file: "index" } }
 
   # - name: docs
