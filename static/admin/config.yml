@@ -40,3 +40,19 @@ collections:
         name: title
         widget: string
     meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+
+  - name: 'pages3'
+    label: 'Pages3'
+    folder: '_pages3'
+    create: true
+    nested: { depth: 100, subfolders: false }
+    fields:
+      - label: Path
+        name: path
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Content
+        name: body
+        widget: markdown
