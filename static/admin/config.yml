@@ -34,20 +34,20 @@ collections:
       - { name: "document", label: "Belge", widget: "file" } # Herhangi bir dosya yüklemek için kullanılır. => PDF, doküman, sunum gibi dosyalar eklenmek istendiğinde kullanılabilir.
       - { name: "layout", label: "Layout", widget: "hidden", default: "blog" }
       - { name: "thumbnail", label: "Kapak Görseli", widget: "image" } # Görsel yüklemek için kullanılır. => Mesela kapak görseli, profil fotoğrafı gibi görsel eklenmesi gereken durumlarda kullanılabilir.
-      - { name: "tags", label: "Etiketler", widget: "list", allow_add: true } # Etiketler, anahtar kelimeler, maddeler gibi birden fazla veri girilecekse kullanılabilir.
-      - { name: "location", label: "Konum", widget: "map" }
-      - { name: "body", label: "İçerik", widget: "markdown" }
-      - { name: "rating", label: "Puan", widget: "number" }
-      - label: "Adres"
+      - { name: "tags", label: "Etiketler", widget: "list", allow_add: true } # Mesela rtiketler, anahtar kelimeler, maddeler gibi birden fazla veri girilecekse kullanılabilir.
+      - { name: "location", label: "Konum", widget: "map" } # Harita üzerinden konum seçmek için kullanılır. => Mesela adres, etkinlik yeri, mağaza konumu gibi coğrafi bilgi gerektiğinde kullanılabilir.
+      - { name: "body", label: "İçerik", widget: "markdown" } # Zengin metin (başlık, liste, link, görsel vb.) girişi için kullanılır.s
+      - { name: "rating", label: "Puan", widget: "number" } # Sayı girişi için kullanılır. => Sıralama, puan, fiyat gibi sayısal veri gerektiğinde kullanılabilir.
+      - label: "Adres" # Birden fazla alanı bir arada gruplamak için kullanılır. => Mesela adres, sosyal medya linkleri gibi birden fazla alt alanı olan veri gruplarında kullanılabilir.
         name: "address"
         widget: "object"
         fields:
           - { label: "Şehir", name: "city", widget: "string" }
           - { label: "Posta Kodu", name: "zip", widget: "string" }
       - { name: "author", label: "Yazar", widget: "relation", collection: "authors", search_fields: ["name"], value_field: "name", display_fields: ["name"] }
-      - { name: "category", label: "Kategori", widget: "select", options: ["Duyuru", "Blog", "Etkinlik"] }
-      - { name: "title", label: "Başlık", widget: "string" }
-      - { name: "summary", label: "Özet", widget: "text" }
+      - { name: "category", label: "Kategori", widget: "select", options: ["Duyuru", "Blog", "Etkinlik"] } # Açılır menüden tek veya çoklu seçim için kullanılır. => Mesela kategori, durum, tür gibi önceden tanımlı seçenekler arasından seçim yapılacaksa kullanılabilir.
+      - { name: "title", label: "Başlık", widget: "string" } # Tek satırlık metin girişi için kullanılır. => Mesela başlık, isim, kısa açıklama gibi kısa metinler için kullanılabilir.
+      - { name: "summary", label: "Özet", widget: "text" } # Çok satırlı metin girişi için kullanılır. Mesela uzun açıklama, özet, biyografi gibi alanlarda kullanılabilir.
     meta: { path: { widget: string, label: "Yol", index_file: "index" } }
 
   # - name: docs
