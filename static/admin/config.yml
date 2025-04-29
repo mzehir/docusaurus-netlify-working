@@ -20,6 +20,39 @@ collections:
       - { name: "body", label: "fffff", widget: "markdown", required: false }
     meta: { path: { widget: string, label: "zzzzz", index_file: "index" } }
 
+  - name: documents
+    label: Dokümanlar
+    label_singular: "Doküman"
+    folder: docs
+    create: true
+    nested: { depth: 100, subfolders: false }
+    fields:
+      - {
+          # Tek satırlık metin girişi için kullanılır. => Mesela başlık, isim, kısa açıklama gibi kısa metinler için kullanılabilir.
+          name: "title",
+          label: "Başlık",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          # Tarih ve saat seçici sunar. => Mesela yayın tarihi, etkinlik zamanı gibi zaman bilgisinin gerektiği durumlarda kullanılabilir.
+          name: "publish_date",
+          label: "Yayın Tarihi",
+          widget: "datetime",
+          required: false,
+        }
+
+      - {
+          # Zengin metin (başlık, liste, link, görsel vb.) girişi için kullanılır.
+          name: "body",
+          label: "İçerik",
+          widget: "markdown",
+          required: false,
+        }
+
+    meta: { path: { widget: string, label: "Yol", index_file: "index" } }
+
   - name: examples
     label: Örnekler
     label_singular: "Example"
