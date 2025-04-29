@@ -27,7 +27,7 @@ collections:
     create: true
     nested: { depth: 100, subfolders: false }
     fields:
-      - { name: "active", label: "Aktif mi?", widget: "boolean", default: true }
+      - { name: "active", label: "Aktif mi?", widget: "boolean", default: true } # Evet/Hayır, Açık/Kapalı gibi iki durumlu seçimler için kullanılır. => Mesela bir içeriğin aktif/pasif, öne çıkarılmış/çıkarılmamış gibi durumlarını yönetebilmek için kullanılabilir.
       - { name: "code", label: "Kod", widget: "code", default_language: "javascript" }
       - { name: "color", label: "Renk", widget: "color" }
       - { name: "publish_date", label: "Yayın Tarihi", widget: "datetime" }
@@ -48,7 +48,7 @@ collections:
       - { name: "category", label: "Kategori", widget: "select", options: ["Duyuru", "Blog", "Etkinlik"] }
       - { name: "title", label: "Başlık", widget: "string" }
       - { name: "summary", label: "Özet", widget: "text" }
-    meta: { path: { widget: string, label: "zzzzz", index_file: "index" } }
+    meta: { path: { widget: string, label: "Yol", index_file: "index" } }
 
   # - name: docs
   #   label: Dokümanlar 1
