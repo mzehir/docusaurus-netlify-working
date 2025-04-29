@@ -34,7 +34,7 @@ collections:
       - { name: "document", label: "Belge", widget: "file" } # Herhangi bir dosya yüklemek için kullanılır. => PDF, doküman, sunum gibi dosyalar eklenmek istendiğinde kullanılabilir.
       - { name: "layout", label: "Layout", widget: "hidden", default: "blog" }
       - { name: "thumbnail", label: "Kapak Görseli", widget: "image" } # Görsel yüklemek için kullanılır. => Mesela kapak görseli, profil fotoğrafı gibi görsel eklenmesi gereken durumlarda kullanılabilir.
-      - { name: "tags", label: "Etiketler", widget: "list", allow_add: true } # Mesela rtiketler, anahtar kelimeler, maddeler gibi birden fazla veri girilecekse kullanılabilir.
+      - { name: "tags", label: "Etiketler AA", widget: "list", max: 3, min: 1, allow_add: true } # Mesela etiketler, anahtar kelimeler, maddeler gibi birden fazla veri girilecekse kullanılabilir.
       - { name: "location", label: "Konum", widget: "map" } # Harita üzerinden konum seçmek için kullanılır. => Mesela adres, etkinlik yeri, mağaza konumu gibi coğrafi bilgi gerektiğinde kullanılabilir.
       - { name: "body", label: "İçerik", widget: "markdown" } # Zengin metin (başlık, liste, link, görsel vb.) girişi için kullanılır.s
       - { name: "rating", label: "Puan", widget: "number" } # Sayı girişi için kullanılır. => Sıralama, puan, fiyat gibi sayısal veri gerektiğinde kullanılabilir.
