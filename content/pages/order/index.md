@@ -1,0 +1,4 @@
+---
+title: Satış
+---
+Satış Ekranı
