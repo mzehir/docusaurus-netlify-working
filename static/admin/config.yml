@@ -8,15 +8,16 @@ public_folder: /img
 collections:
   - name: pages
     label: aaaaa
-    label_singular: 'Page'
+    label_singular: "Page"
     folder: _pages
     create: true
     nested: { depth: 100, subfolders: false }
     fields:
-      - label: bbbbbb
-        name: title
-        widget: string
-    meta: { path: { widget: string, label: 'cccccc', index_file: 'index' } }
+      - { label: "bbbbb1", name: "title", widget: "string" }
+      # - label: bbbbbb
+      #   name: title
+      #   widget: string
+    meta: { path: { widget: string, label: "cccccc", index_file: "index" } }
 
   # - name: docs
   #   label: Dokümanlar 1
