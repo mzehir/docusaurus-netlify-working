@@ -9,10 +9,10 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "views"
-    label: "Views"
-    label_singular: "Page"
-    folder: "views"
+  - name: "docs"
+    label: "Dokümanlar"
+    label_singular: "Doc"
+    folder: "docs"
     create: true
     nested:
       depth: 5
