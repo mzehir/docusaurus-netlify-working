@@ -10,7 +10,8 @@ collections:
     label: "Dokümanlar"
     folder: "docs"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    nested:
+      depth: 4
     fields:
       - {label: "Başlık", name: "title", widget: "string"}
       - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
