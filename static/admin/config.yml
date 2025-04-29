@@ -13,11 +13,9 @@ collections:
     create: true
     nested: { depth: 100, subfolders: false }
     fields:
-      - { label: "bbbbb1", name: "title", widget: "string" }
-      # - label: bbbbbb
-      #   name: title
-      #   widget: string
-    meta: { path: { widget: string, label: "cccccc", index_file: "index" } }
+      - { name: "title", label: "bbbbb", widget: "string" }
+      - { name: "body", label: "ccccc", widget: "markdown" }
+    meta: { path: { widget: string, label: "zzzzz", index_file: "index" } }
 
   # - name: docs
   #   label: Dokümanlar 1
