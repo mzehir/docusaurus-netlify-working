@@ -44,9 +44,9 @@ collections:
           label: "Yazar",
           widget: "relation",
           collection: "authors",
-          search_fields: ["name", "surname", "email"],
-          value_field: "name",
-          display_fields: ["${name} ${surname} - (${email})"],
+          search_fields: ["name", "surname"],
+          value_field: "email",
+          display_fields: ["name", "surname"],
           required: false,
           hint: "Seçim zorunlu değildir."
         }
