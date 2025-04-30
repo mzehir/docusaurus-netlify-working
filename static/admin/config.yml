@@ -31,14 +31,6 @@ collections:
     create: true
     nested: { depth: 100, subfolders: false }
     fields:
-      # - name: "recordType"
-      #   label: "Kayıt Tipi"
-      #   widget: "select"
-      #   options:
-      #     - { label: "Klasör", value: "folder" }
-      #     - { label: "Sayfa(İçerik)", value: "page" }
-      #   required: false
-
       - {
           name: "author",
           label: "Yazar",
