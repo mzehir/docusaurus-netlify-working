@@ -6,20 +6,6 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: pages
-    label: aaaaa111
-    label_singular: "Page"
-    folder: _pages
-    create: true
-    nested: { depth: 100, subfolders: false }
-    fields:
-      - { name: "title", label: "bbbbb", widget: "string", required: true }
-      - { name: "date", label: "ccccc", widget: "datetime", required: false }
-      - { name: "rating", label: "ddddd", widget: "number", required: false }
-      - { name: "thumbnail", label: "eeeee", widget: "image", required: false }
-      - { name: "body", label: "fffff", widget: "markdown", required: false }
-    meta: { path: { widget: string, label: "zzzzz", index_file: "index" } }
-
   - name: documents
     label: Dokümanlar
     label_singular: "Doküman"
