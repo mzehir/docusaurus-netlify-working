@@ -25,7 +25,4 @@ Alış İçin yüklü olarak gelen belge işlem tipleri şunlardır:
 **ZS.091 => Yurtiçi Satış İade:** Yurtiçi Satış faturalarından iade olarak gelen faturalar bu menüden girilir.
 **ZS.191 => Yurtdışı Satış İade:** Yurtdışı Satış faturalarından iade olarak gelen faturalar bu menüden girilir.
 
-\
-\
-
 <iframe     width="560"     height="315"     src="https://www.youtube.com/embed/UDho2ngrt8c?si=MKGxBFyC7PClS_AE"    title="YouTube video player"     frameborder="0"    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"    referrerpolicy="strict-origin-when-cross-origin"     allowfullscreen></iframe>
