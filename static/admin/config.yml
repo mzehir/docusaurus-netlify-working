@@ -14,15 +14,8 @@ collections:
     nested: { depth: 1, subfolders: false }
     fields:
       - {
-          name: "name",
-          label: "Ad",
-          widget: "string",
-          required: false,
-        }
-
-      - {
-          name: "surname",
-          label: "Soyad",
+          name: "username",
+          label: "Kullanıcı Adı",
           widget: "string",
           required: false,
         }
