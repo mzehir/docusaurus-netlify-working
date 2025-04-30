@@ -32,7 +32,6 @@ collections:
     nested: { depth: 100, subfolders: false }
     fields:
       - {
-          # Tek satırlık metin girişi için kullanılır. => Mesela başlık, isim, kısa açıklama gibi kısa metinler için kullanılabilir.
           name: "title",
           label: "Başlık",
           widget: "string",
@@ -40,7 +39,6 @@ collections:
         }
 
       - {
-          # Tarih ve saat seçici sunar. => Mesela yayın tarihi, etkinlik zamanı gibi zaman bilgisinin gerektiği durumlarda kullanılabilir.
           name: "publish_date",
           label: "Yayın Tarihi",
           widget: "datetime",
@@ -48,7 +46,28 @@ collections:
         }
 
       - {
-          # Zengin metin (başlık, liste, link, görsel vb.) girişi için kullanılır.
+          name: "author",
+          label: "Yazar",
+          widget: "relation",
+          collection: "authors",
+          search_fields: ["name", "surname", "email"],
+          value_field: "name",
+          display_fields: ["name", "surname", "email"],
+          required: false,
+        }
+
+      - {
+          name: "job_titles",
+          label: "Ünvan",
+          widget: "relation",
+          collection: "job_titles",
+          search_fields: ["title"],
+          value_field: "title",
+          display_fields: ["title"],
+          required: false,
+        }
+
+      - {
           name: "body",
           label: "İçerik",
           widget: "markdown",
