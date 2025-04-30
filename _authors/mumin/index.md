@@ -1,5 +1,4 @@
 ---
-name: Mümin
-surname: Zehir
+username: mzehir
 email: zehir.m.54@gmail.com
 ---
