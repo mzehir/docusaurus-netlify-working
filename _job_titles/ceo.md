@@ -1,3 +1,3 @@
 ---
-title: Ceo
+title: Cto
 ---
