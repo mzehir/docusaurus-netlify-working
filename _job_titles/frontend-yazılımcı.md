@@ -1,3 +1,3 @@
 ---
-title: "Frontend Yazılımcı "
+title: "Frontend Developer "
 ---
