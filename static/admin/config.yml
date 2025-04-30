@@ -31,19 +31,13 @@ collections:
     create: true
     nested: { depth: 100, subfolders: false }
     fields:
-      - {
-          name: "title",
-          label: "Başlık",
-          widget: "string",
-          required: false,
-        }
-
-      - {
-          name: "publish_date",
-          label: "Yayın Tarihi",
-          widget: "datetime",
-          required: false,
-        }
+      # - name: "recordType"
+      #   label: "Kayıt Tipi"
+      #   widget: "select"
+      #   options:
+      #     - { label: "Klasör", value: "folder" }
+      #     - { label: "Sayfa(İçerik)", value: "page" }
+      #   required: false
 
       - {
           name: "author",
@@ -52,8 +46,9 @@ collections:
           collection: "authors",
           search_fields: ["name", "surname", "email"],
           value_field: "name",
-          display_fields: ["name", "surname", "email"],
+          display_fields: ["${name} ${surname} - (${email})"],
           required: false,
+          hint: "Seçim zorunlu değildir."
         }
 
       - {
@@ -65,6 +60,50 @@ collections:
           value_field: "title",
           display_fields: ["title"],
           required: false,
+          hint: "Seçim zorunlu değildir."
+        }
+
+      - {
+          name: "publish_date",
+          label: "Yayın Tarihi",
+          widget: "datetime",
+          required: false,
+          hint: "Zorunlu değildir."
+        }
+
+      - {
+          name: "title",
+          label: "Başlık",
+          widget: "string",
+          required: false,
+          hint: "Zorunlu değildir."
+        }
+
+      - {
+          name: "summary",
+          label: "Özet",
+          widget: "text",
+          required: false,
+          hint: "Zorunlu değildir."
+        }
+
+      - {
+          name: "tags",
+          label: "Etiketler",
+          widget: "list",
+          max: 5,
+          min: 0,
+          allow_add: true,
+          required: false,
+          hint: "Zorunlu değildir."
+        }
+
+      - {
+          name: "thumbnail",
+          label: "Kapak Görseli",
+          widget: "image",
+          required: false,
+          hint: "Zorunlu değildir."
         }
 
       - {
@@ -72,6 +111,7 @@ collections:
           label: "İçerik",
           widget: "markdown",
           required: false,
+          hint: "Zorunlu değildir."
         }
 
     meta: { path: { widget: string, label: "Yol", index_file: "index" } }
