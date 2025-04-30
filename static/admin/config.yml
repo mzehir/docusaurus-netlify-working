@@ -6,6 +6,43 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: authors
+    label: Yazarlar
+    label_singular: "Yazar"
+    folder: _authors
+    create: true
+    nested: { depth: 1, subfolders: false }
+    fields:
+      - {
+          name: "name",
+          label: "Ad",
+          widget: "string",
+          required: false,
+        }
+
+        - {
+          name: "surname",
+          label: "Soyad",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          name: "email",
+          label: "E-Posta",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          name: "image",
+          label: "Fotoğraf",
+          widget: "image",
+          required: false,
+        }
+
+    meta: { path: { widget: string, label: "Yol", index_file: "index" } }
+
   - name: documents
     label: Dokümanlar
     label_singular: "Doküman"
