@@ -257,3 +257,43 @@ collections:
         }
 
     meta: { path: { widget: string, label: "Yol", index_file: "index" } }
+
+  - name: documents2
+    label: Dokümanlar2
+    label_singular: "Doküman2"
+    folder: docs2
+    create: true
+    nested:
+      depth: 100
+      summary: '{{title}}'
+      path:
+        - label: 'Kategori'
+          index_file: 'index'
+        - label: 'Alt Kategori'
+          index_file: 'index'
+        - label: 'Başlık'
+    fields:
+      - { name: "email", label: "E-Posta", widget: "string" }
+
+  - name: documents3
+    label: Dokümanlar3
+    label_singular: "Doküman3"
+    folder: docs3
+    create: true
+    nested:
+      depth: 5  # Maksimum 5 seviye derinlik
+      summary: '{{title}}'
+      path:
+        - label: 'Seviye 1'
+          index_file: '_index'
+        - label: 'Seviye 2'
+          index_file: '_index'
+        - label: 'Seviye 3'
+          index_file: '_index'
+        - label: 'Seviye 4'
+          index_file: '_index'
+        - label: 'Seviye 5'
+          index_file: '_index'
+          final: true
+    fields:
+      - { name: "email", label: "E-Posta", widget: "string" }  # 5. seviyede sadece dosya oluşturulabilir, yeni klasör oluşturulamaz
