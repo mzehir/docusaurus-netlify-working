@@ -8,33 +8,43 @@ public_folder: /img
 collections:
   - name: authors
     label: Yazarlar
-    label_singular: "Yazar"
     folder: _authors
     create: true
-    nested: { depth: 1, subfolders: false }
     fields:
-      - {
-          name: "username",
-          label: "Kullanıcı Adı",
-          widget: "string",
-          required: false,
-        }
+      - { name: "name", label: "Ad", widget: "string" }
+      - { name: "surname", label: "Soyad", widget: "string" }
+      - { name: "email", label: "E-Posta", widget: "string" }
+      - { name: "image", label: "Fotoğraf", widget: "image", required: false }
 
-      - {
-          name: "email",
-          label: "E-Posta",
-          widget: "string",
-          required: false,
-        }
+  # - name: authors
+  #   label: Yazarlar
+  #   label_singular: "Yazar"
+  #   folder: _authors
+  #   create: true
+  #   nested: { depth: 100, subfolders: false }
+  #   fields:
+  #     - {
+  #         name: "username",
+  #         label: "Kullanıcı Adı",
+  #         widget: "string",
+  #         required: false,
+  #       }
 
-      - {
-          name: "image",
-          label: "Fotoğraf",
-          widget: "image",
-          required: false,
-        }
+  #     - {
+  #         name: "email",
+  #         label: "E-Posta",
+  #         widget: "string",
+  #         required: false,
+  #       }
 
-    meta: { path: { widget: string, label: "Yol", index_file: "index" } }
+  #     - {
+  #         name: "image",
+  #         label: "Fotoğraf",
+  #         widget: "image",
+  #         required: false,
+  #       }
+
+  #   meta: { path: { widget: string, label: "Yol", index_file: "index" } }
 
   - name: documents
     label: Dokümanlar
