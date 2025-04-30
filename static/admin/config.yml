@@ -202,20 +202,3 @@ collections:
         }
 
     meta: { path: { widget: string, label: "Yol", index_file: "index" } }
-
-  # - name: docs
-  #   label: Dokümanlar 1
-  #   label_singular: "Doc"
-  #   folder: docs
-  #   create: true
-  #   nested:
-  #     depth: 5
-  #     summary: "{{title}}"
-  #   fields:
-  #     - label: Başlık
-  #       name: title
-  #       widget: string
-  #     - label: İçerik
-  #       name: body
-  #       widget: markdown
-  #   meta: { path: { widget: string, label: "Path", index_file: "index" } }
