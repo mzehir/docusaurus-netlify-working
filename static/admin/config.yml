@@ -20,7 +20,7 @@ collections:
           required: false,
         }
 
-        - {
+      - {
           name: "surname",
           label: "Soyad",
           widget: "string",
