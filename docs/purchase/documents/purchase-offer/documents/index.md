@@ -9,6 +9,7 @@ tags:
   - sales
   - purchase
   - salesorder
+  - ahmet
 thumbnail: /img/docusaurus-social-card.jpg
 ---
 Alış İçin yüklü olarak gelen belge işlem tipleri şunlardır:
