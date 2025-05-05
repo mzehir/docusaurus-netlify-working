@@ -16,7 +16,6 @@ tags:
   - label1
   - label2
   - label3
-  - ""
 ---
 # **Örnek mdx Dosyası İçeriği**
 
