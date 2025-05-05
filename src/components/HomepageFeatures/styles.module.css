@@ -6,6 +6,49 @@
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 80px;
+  width: 80px;
+  color: #1a237e;
+}
+
+.theme-dark .featureSvg {
+  color: #fff;
+}
+
+.card {
+  background: var(--ifm-background-surface-color, #fff);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  padding: 2rem 1rem;
+  margin: 1rem 0;
+  transition: box-shadow 0.2s;
+  border: 1px solid var(--ifm-toc-border-color, #eaeaea);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+}
+
+.theme-dark .card {
+  background: #18191a;
+  border-color: #33363a;
+}
+
+.iconFrame {
+  background: #f3f5f7;
+  border-radius: 12px;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
+  transition: background 0.2s;
+}
+
+.theme-dark .iconFrame {
+  background: #23272f;
 }
