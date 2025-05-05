@@ -29,7 +29,7 @@ collections:
     label_singular: "Doküman"
     folder: docs
     create: true
-    nested: { depth: 1000000, subfolders: false }
+    nested: { depth: 1000, subfolders: false }
     fields:
       - name: "routeType"
         label: "Rota Tipi"
