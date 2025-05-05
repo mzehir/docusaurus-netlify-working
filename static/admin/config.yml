@@ -29,8 +29,17 @@ collections:
     label_singular: "Doküman"
     folder: docs
     create: true
-    nested: { depth: 100, subfolders: false }
+    nested: { depth: 5, subfolders: false }
     fields:
+      - name: "routeType"
+        label: "Rota Tipi"
+        widget: "select"
+        options:
+          - { label: "Klasör", value: "folder" }
+          - { label: "Sayfa", value: "page" }
+        required: true
+        default: "folder"
+
       - {
           name: "author",
           label: "Yazar",
@@ -258,23 +267,17 @@ collections:
 
     meta: { path: { widget: string, label: "Yol", index_file: "index" } }
 
-  - name: documents2
-    label: Dokümanlar 2
-    label_singular: "Doküman 2"
-    folder: docs2
-    create: true
-    nested: { depth: 5, subfolders: true }
-    fields:
-      - {
-          name: "title",
-          label: "Başlık",
-          widget: "string",
-        }
+  # - name: documents2
+  #   label: Dokümanlar 2
+  #   label_singular: "Doküman 2"
+  #   folder: docs2
+  #   create: true
+  #   nested: { depth: 5, subfolders: true }
+  #   fields:
+  #     - {
+  #         name: "title",
+  #         label: "Başlık",
+  #         widget: "string",
+  #       }
 
-      - {
-          name: "body",
-          label: "İçerik",
-          widget: "markdown",
-        }
-
-    meta: { path: { widget: string, label: "Yol", index_file: "index" } }
+  #   meta: { path: { widget: string, label: "Yol", index_file: "index" } }
