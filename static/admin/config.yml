@@ -38,7 +38,7 @@ collections:
           - { label: "Klasör", value: "folder" }
           - { label: "Sayfa", value: "page" }
         required: true
-        default: "folder"
+        default: folder
 
       - {
           name: "author",
