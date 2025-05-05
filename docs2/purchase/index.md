@@ -1,0 +1,4 @@
+---
+title: Satınalma
+---
+Lorem
