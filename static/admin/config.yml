@@ -41,6 +41,13 @@ collections:
         default: folder
 
       - {
+          name: "title",
+          label: "Başlık",
+          widget: "string",
+          required: true,
+        }
+
+      - {
           name: "author",
           label: "Yazar",
           widget: "relation",
@@ -68,14 +75,6 @@ collections:
           name: "publish_date",
           label: "Yayın Tarihi",
           widget: "datetime",
-          required: false,
-          hint: "Zorunlu değildir."
-        }
-
-      - {
-          name: "title",
-          label: "Başlık",
-          widget: "string",
           required: false,
           hint: "Zorunlu değildir."
         }
