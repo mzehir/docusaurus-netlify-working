@@ -1,4 +1,0 @@
----
-routeType: folder
-title: Satınalma
----
