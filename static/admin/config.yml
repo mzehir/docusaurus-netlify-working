@@ -265,18 +265,3 @@ collections:
         }
 
     meta: { path: { widget: string, label: "Yol", index_file: "index" } }
-
-  # - name: documents2
-  #   label: Dokümanlar 2
-  #   label_singular: "Doküman 2"
-  #   folder: docs2
-  #   create: true
-  #   nested: { depth: 5, subfolders: true }
-  #   fields:
-  #     - {
-  #         name: "title",
-  #         label: "Başlık",
-  #         widget: "string",
-  #       }
-
-  #   meta: { path: { widget: string, label: "Yol", index_file: "index" } }
